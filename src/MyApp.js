@@ -8,39 +8,28 @@ function MyApp() {
         job: 'Janitor',
          // the rest of the data
       },
+      {
+        name: 'jon',
+        job: 'best friend',
+      },
+      {
+        name: 'jax',
+        job: 'joker',
+      },
     ]);
-}
 
 function removeOneCharacter (index) {
   const updated = characters.filter((character, i) => {
-    return i !== index
-  });
-  setCharacters(updated);
+      return i !== index
+    });
+    setCharacters(updated);
+  }
+  return (
+    <div className="container">
+      <Table characterData={characters} removeCharacter={removeOneCharacter} />
+    </div>
+  )
 }
 
 
-const characters = [
-  {
-    name: 'Charlie',
-    job: 'Janitor',
-  },
-  {
-    name: 'Mac',
-    job: 'Bouncer',
-  },
-  {
-    name: 'Dee',
-    job: 'Aspring actress',
-  },
-  {
-    name: 'Dennis',
-    job: 'Bartender',
-  },
-];
-
-return (
-  <div className="container">
-    <Table characterData={characters} removeCharacter={removeOneCharacter} />
-  </div>
-)
 export default MyApp;
