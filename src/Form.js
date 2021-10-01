@@ -1,9 +1,6 @@
 import React, {useState} from 'react';
 
 function Form(props) {
-
-
-
   const [person, setPerson] = useState(
      {
         name: '',
@@ -24,7 +21,7 @@ function Form(props) {
 
   function submitForm() {
     props.handleSubmit(person);
-    setPerson({name: '', job: ''});
+    setPerson({name: '', job: '', id: ''});
   }
 
 
