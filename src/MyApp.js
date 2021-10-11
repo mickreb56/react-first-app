@@ -51,7 +51,7 @@ function MyApp() {
   async function deleteid(person){
     try {
 
-      const response = await axios.delete('http://localhost:5000/users/'.concat(person.id));
+      const response = await axios.delete('http://localhost:5000/users/'.concat(person._id));
       return response.data;
     }
     catch (error){
@@ -64,7 +64,7 @@ function MyApp() {
  function updateList(person) {
   makePostCall(person).then( result => {
   if (result)
-     setCharacters([...characters, result.data] );
+     setCharacters([...characters, result] );
   });
 }
 
